@@ -1,0 +1,35 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Students</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="updateStudentDetail()" class="edit-form">
+          <div class="form-group">
+            <label for="studentID" class="form-label">Student ID</label>
+            <input type="number" class="form-control" id="studentID" readonly name="studentID" [(ngModel)]="studentDetails.studentID">
+          </div>
+          <div class="form-group">
+            <label for="name" class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="studentDetails.studentName">
+          </div>
+          <div class="form-group">
+            <label for="course" class="form-label">Course</label>
+            <input type="text" class="form-control" id="course" name="course" [(ngModel)]="studentDetails.course">
+          </div>
+          <div class="form-group">
+            <label for="specialization" class="form-label">Specialization</label>
+            <input type="text" class="form-control" id="specialization" name="specialization" [(ngModel)]="studentDetails.specialization">
+          </div>
+          <div class="form-group">
+            <label for="percentage" class="form-label">Percentage</label>
+            <input type="text" class="form-control" id="percentage" name="percentage" [(ngModel)]="studentDetails.percentage">
+          </div>
+          <div class="form-group">
+            <label for="departmentID" class="form-label">Department ID</label>
+            <input type="text" class="form-control" id="departmentID" name="departmentID" [(ngModel)]="studentDetails.departmentID">
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

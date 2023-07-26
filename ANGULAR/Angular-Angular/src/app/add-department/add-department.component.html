@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <h1 class="text-center">Add Department</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form #form="ngForm" (ngSubmit)="addDepartment()" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Department Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addDepartmentList.departmentName" required>
+            <div *ngIf="form.controls['name']?.invalid && form.controls['name'].touched" class="text-danger">
+              Student Name is required.
+            </div>
+          </div>
+          <div class="text-center">
+             <button type="submit" class="btn btn-primary">Submit</button>
+             
+            <button type="button" class="btn btn-secondary" (click)="cancelForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

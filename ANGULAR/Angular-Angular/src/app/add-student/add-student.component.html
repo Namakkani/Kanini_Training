@@ -1,0 +1,57 @@
+<div class="container my-5">
+    <h1 class="text-center">Add Student</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form #form="ngForm" (ngSubmit)="addStudent()" novalidate>
+          <div class="form-group">
+            <label for="studentID" class="form-label">Student ID</label>
+            <input type="number" class="form-control" id="studentID" name="studentID" [(ngModel)]="addStudentList.studentID" required>
+            <div *ngIf="form.controls['name']?.invalid && form.controls['name'].touched" class="text-danger">
+              Student id is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addStudentList.studentName" required>
+            <div *ngIf="form.controls['name']?.invalid && form.controls['name'].touched" class="text-danger">
+              Student Name is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="course" class="form-label">Course</label>
+            <input type="text" class="form-control" id="course" name="course" [(ngModel)]="addStudentList.course" required>
+            <div *ngIf="form.controls['course']?.invalid && form.controls['course'].touched" class="text-danger">
+              Course is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="specialization" class="form-label">Specialization</label>
+            <input type="text" class="form-control" id="specialization" name="specialization" [(ngModel)]="addStudentList.specialization" required>
+            <div *ngIf="form.controls['specialization']?.invalid && form.controls['specialization'].touched" class="text-danger">
+              Specialization is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="percentage" class="form-label">Percentage</label>
+            <input type="number" class="form-control" id="percentage" name="percentage" [(ngModel)]="addStudentList.percentage" required>
+            <div *ngIf="form.controls['percentage']?.invalid && form.controls['percentage'].touched" class="text-danger">
+              Percentage is required and must be a number.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="departmentID" class="form-label">Department ID</label>
+            <input type="number" class="form-control" id="departmentID" name="departmentID" [(ngModel)]="addStudentList.departmentID" required>
+            <div *ngIf="form.controls['departmentID']?.invalid && form.controls['departmentID'].touched" class="text-danger">
+              Department ID is required and must be a number.
+            </div>
+          </div>
+  
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelForm()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

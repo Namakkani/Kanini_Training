@@ -1,0 +1,32 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  .edit-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .edit-form .form-label {
+    font-weight: bold;
+  }
+  
+  .edit-form .btn-primary {
+    width: 100%;
+  }
+  
+  .edit-form .btn-primary:hover {
+    background-color: #286090;
+  }
+  
+  .edit-form .btn-primary:focus {
+    background-color: #204d74;
+    box-shadow: none;
+  }
+  
